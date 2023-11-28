@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form관련태그</title>
+  </head>
+  <body>
+    <h1>form 관련태그</h1>
+    <h2>form 기초</h2>
+
+    <form action="">
+      <fieldset>
+        <legend>폼 타이틀</legend>
+        아이디
+        <input
+          type="text"
+          title="아이디"
+          size="50"
+          placeholder="아이디를 입력하세요.(8자이하)"
+          autofocus
+          autocomplete="on"
+        />
+        <!-- placeholder 가이드설명 -->
+        <br />
+        <br />
+
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" value="이현정" readonly />
+        <!-- value값 넣어줄 수 있음 / 휴대폰인증하고 오면 이름수정 x -> readonly사용 -->
+        <br /><br />
+
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" name="pw" /> <br /><br />
+
+        라디오 <br />
+        <input type="radio" name="group" id="html" />
+        <label for="html">html</label> <br />
+
+        <input type="radio" name="group" id="css" />
+        <label for="css">css</label> <br />
+
+        <input type="radio" name="group" id="" />
+        <label for="js">js</label> <br /><br />
+
+        체크박스 <br />
+        <input type="checkbox" name="consent1" id="consent1" />
+        <label for="consent1">동의 1</label>
+
+        <input type="checkbox" name="consent2" id="consent2" />
+        <label for="consent2">동의 2</label>
+
+        <input type="checkbox" name="consent3" id="consent3" />
+        <label for="consent3">동의3</label> <br /><br />
+
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" size="50" /> <br /><br />
+
+        <label for="file">첨부파일</label>
+        <input type="file" name="file" id="file" /> <br /><br />
+
+        <label for="number">숫자</label>
+        <input type="number" name="number" id="number" disabled /> <br /><br />
+        <!-- 숫자 받고 싶지 않다면 disabled 추가 -->
+
+        <label for="sel">계절 선택</label>
+
+        <select name="sel" id="sel" multiple>
+          <option value="봄">봄</option>
+          <option value="여름" selected>여름</option>
+          <!-- selected : 초기값 설정 -->
+          <option value="가을">가을</option>
+          <option value="겨울">겨울</option>
+        </select>
+        <br /><br />
+
+        <label for="text">글쓰기</label>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="100자까지 작성가능"
+        ></textarea>
+        <br /><br /><br /><br />
+
+        <!-- 기능이 없는 버튼 -->
+        <!-- a (하이퍼링크) : 페이지 전환용  -->
+        <!-- input:button, button => 동적처리 -->
+        <!-- input인데 type이 버튼이다 => input:button -->
+        <!-- 면접볼때 종종 -->
+
+        <input type="button" value="input 버튼" />
+        <!-- input type 버튼 : 열었다가 닫는 단일버튼-->
+        <button><b>button 타입 버튼</b></button>
+        <!-- button 타입 버튼 : 열었다 닫았다 가능 -->
+
+        <input type="submit" value="내용 전송" />
+        <input type="reset" value="취소" />
+      </fieldset>
+    </form>
+  </body>
+</html>
