@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이밍 표기법</title>
+  </head>
+  <body>
+    <h1>네이밍 표기법</h1>
+    <h2>BEM 표기법</h2>
+    <!-- block 표기법 -->
+    <div class="slide">
+      <!-- element 표기법 - 요소 : block__element-->
+      <div class="slide__item">slide</div>
+      <!-- modifier 표기법 - 상태 : block__element--modifier -->
+      <div class="slide__item slide__item--active">slide</div>
+      <div class="slide__item">slide</div>
+    </div>
+
+    <!-- 상태가 다른 폼 - 로그인 폼 -->
+    <form action="" class="form form--login">
+      <!-- 위 해당 태그는 form이라는 클래스이름(form)과 로그인 폼(form--login) 둘 다를 가지고 있음 -->
+      <input type="text" class="form__text" />
+      <input
+        type="submit"
+        value="전송"
+        class="form__submit form__submit--disabled"
+      />
+      <!-- form__submit이란 애가 있는데 form__submit 얘가 disabled 상태야 -->
+    </form>
+  </body>
+</html>

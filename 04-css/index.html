@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS의 기초</title>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./comm.css" />
+    <style>
+      p {
+        font-size: 20px;
+        color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css의 기초</h1>
+    <!-- 인라인 스타일 : 제일 우선순위가 높음 -->
+    <strong style="font-size: 30px; font-weight: 600">
+      Lorem ipsum dolor sit amet.
+    </strong>
+    <p class="desc1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aut.
+    </p>
+    <!-- font-size : 기본이 16px  / font-weight : 기본이 400-->
+    <p class="desc2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+      accusantium itaque similique mollitia facere dignissimos aperiam illum
+      adipisci minus quidem.
+    </p>
+    <div id="main">
+      <div class="header dark">
+        <nav id="gnb">
+          <ul class="depth1">
+            <li>
+              <a href="#">menu1</a>
+              <ul class="depth2">
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu1-2</a></li>
+                <li><a href="#">menu1-3</a></li>
+                <li><a href="#">menu1-4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+          </ul>
+        </nav>
+        <input type="search" title="검색" class="input" />
+      </div>
+
+      <div class="main">
+        <section class="bbs">
+          <ul>
+            <li><a href="#">공지사항1</a></li>
+            <li><a href="#">공지사항2</a></li>
+            <li><a href="#">공지사항3</a></li>
+            <li><a href="#">공지사항4</a></li>
+          </ul>
+        </section>
+
+        <section class="goto">
+          <!-- 디자인 요소는 css로 삽입 -->
+          <ul>
+            <li><a href="#">바로가기1</a></li>
+            <li><a href="#">바로가기2</a></li>
+            <li><a href="#">바로가기3</a></li>
+            <li><a href="#">바로가기4</a></li>
+          </ul>
+          <!-- 뉴스, 배너 등 운영성 이미지는 이미지태그로 삽입 -->
+        </section>
+        <br /><br />
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./img/thumb.jpeg" alt="닌텐도11월신작" /> 광고텍스트
+            </a>
+          </li>
+        </ul>
+        <br /><br /><br />
+
+        <ul class="icon">
+          <li><a href="#">home</a></li>
+          <li>search</li>
+          <li>github</li>
+          <li>instagram</li>
+          <li>youtube</li>
+        </ul>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </div>
+    </div>
+  </body>
+</html>
