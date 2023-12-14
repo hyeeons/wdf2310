@@ -1,6 +1,5 @@
-* {
-  color: blueviolet;
-}
+@import url(./fonts.css);
+@import url(./reset.css);
 
 .desc1 {
   font-size: 40px;
@@ -173,4 +172,56 @@ p.desc1 {
 .icon li:nth-child(5)::before {
   content: "\f167";
   font-family: "Line Awesome Brands";
+}
+
+.font-size1 {
+  font-size: 20px;
+}
+
+.font-size2 {
+  font-size: 1.25em;
+  /* 12px 기준으로 1.25em은 15 px
+  	*/
+}
+
+.font-size3 {
+  /* 기준이 올라가보면 body(기본) */
+  font-size: 1.666em;
+}
+
+.font-size4 {
+  /* 기준은 올라가보면 font-size3  */
+  font-size: 1.666em;
+}
+
+.font-size5 {
+  font-size: 1.666rem;
+}
+
+.font-size6 {
+  font-size: 1.666rem;
+}
+
+.font-size7 {
+  font-size: 10vw;
+}
+
+.font-f1 {
+  font-size: 20px;
+  font-family: "Trirong", serif;
+}
+
+.font-f2 {
+  font-size: 20px;
+  font-family: "Nova square", serif;
+}
+
+.font-f3 {
+  font-size: 20px;
+  font-family: "Sofia", cursive;
+}
+
+.font-f4 {
+  font-size: 20px;
+  font-family: "JalnanGothic", serif;
 }

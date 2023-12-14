@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text</title>
+  </head>
+  <body>
+    <h1>text</h1>
+    <div class="text1">글씨 정렬 (왼쪽정렬-기본값)</div>
+    <style>
+      .text1 {
+        width: 500px;
+        background: yellowgreen;
+      }
+    </style>
+    <br />
+
+    <div class="text2">글씨 정렬 (가운데정렬)</div>
+    <style>
+      .text2 {
+        width: 150px;
+        text-align: center;
+        background: yellow;
+      }
+    </style>
+    <br />
+    <!-- div : block 요소  / text-align 적용되지 않음 (text는 인라인요소라) => span 사용-->
+    <div class="box1">
+      <span class="box2"
+        >블록요소인 div가 아니라 인라인요소 span 태그추가 - box2가 아닌 box1에
+        정렬넣어줌
+      </span>
+    </div>
+    <style>
+      .box1 {
+        text-align: center;
+        width: 1000px;
+        height: 500px;
+        background: lightblue;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        line-height: 500px;
+        background-color: lightcoral;
+      }
+    </style>
+
+    <h2>
+      vertical align : middle (현재 바닥정렬 -> 이미지와 글씨를 세로가운데정렬
+      시킬 때)
+    </h2>
+    <!-- 이미지 : 아무것도 안 하면 인라인 요소(가라고 생각) => 블럭요소로 바꿔줘야 함(display:block) => 그러면 vertical-algin 요소가 적용되지 않음 (이건 인라인요소 전용)-->
+    <img src="./images/w.jpg" alt="" class="img-w" /> 네이버웨일
+    <style>
+      .img-w {
+        /* display: block; => 블럭요소로 바꿔줌 -> vertical align 요소 적용 안됨  */
+        vertical-align: middle;
+      }
+    </style>
+
+    <h2>Text Decoration &amp; Text-Decoration</h2>
+    <a href="#">goto</a>
+    <style>
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 20px;
+      }
+    </style>
+
+    <h2>Text Indentation</h2>
+    <!-- 텍스트 날려버릴 때 사용 / 일반인은 안 보이고 시각장애인들에게는 들리게 함-->
+    <div class="indent">
+      글씨 날려버려~ Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Voluptatibus quae sed esse asperiores odit, voluptas saepe ipsa, alias
+      nisi laboriosam ut explicabo et porro facilis commodi culpa ab magni sit
+      dignissimos sequi at excepturi temporibus! Esse accusamus rem, possimus in
+      blanditiis illo porro id commodi laborum, molestias laboriosam, nisi iusto
+      quia suscipit debitis facere dolorum. Quia eos possimus nihil corrupti
+      mollitia similique, obcaecati esse ut natus saepe sed maiores dolorem
+      dicta ipsam nostrum totam ipsa! Adipisci vitae porro nam esse reiciendis
+      quaerat recusandae facere, laborum facilis consequatur rerum voluptatibus
+      quasi a, voluptatum aliquam rem reprehenderit quia, explicabo unde animi
+      dicta!
+    </div>
+    <style>
+      .indent {
+        text-indent: -9999px;
+      }
+    </style>
+
+    <h2>line-height & letter-spacing</h2>
+    <div class="txt1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cumque
+      veniam sapiente. Atque, hic soluta!
+    </div>
+
+    <style>
+      .txt1 {
+        font-size: 50px;
+        line-height: 1;
+        letter-spacing: -0.5008px;
+      }
+    </style>
+
+    <h2>White Space: nowrap => 한 줄로 만들기(줄바꿈x)</h2>
+    <div class="txt2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, eius
+      possimus! Sint totam fuga ipsam fugiat officiis error quaerat adipisci
+      facere nulla architecto? Sapiente, neque reiciendis amet earum iusto
+      illum.
+    </div>
+    <style>
+      .txt2 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      /* overflow: hidden => 밖으로 나간 문자들 없애주기 */
+      /* text-overflow: ellipsis => 밖으로 넘친 문자들을 ...으로 처리해줘 */
+    </style>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <title>Box model</title>
+  </head>
+  <body>
+    <h1>Box Model</h1>
+    <div class="box1">컨텐츠</div>
+    <style>
+      .box1 {
+        width: 300px;
+        height: 150px;
+        background: yellow;
+        border: 5px solid blue;
+        padding-top: 50px;
+        padding-left: 50px;
+        margin-left: 100px;
+      }
+    </style>
+
+    <h2>가로세로 기본값 - width(100%) & height(0)</h2>
+
+    <!-- block 요소 -->
+    <!-- 블럭요소의 기본값 - width:100%, height:0 -->
+    <div class="box2">block</div>
+    <div class="box2">block</div>
+
+    <!-- inline 요소 -->
+    <!-- 인라인요소는 가로, 세로 값이 안 들어감 -->
+    <span class="box3">inline</span>
+    <span class="box3">inline</span>
+    <span class="box3">inline</span>
+
+    <!-- inline 요소를 block으로 한 후, 옆으로 배치 -->
+    <span class="box4">inline-block</span>
+    <span class="box4">inline-block</span>
+    <span class="box4">inline-block</span>
+
+    <style>
+      .box2 {
+        /* width: 50%; */
+        height: 100px;
+        background-color: lightskyblue;
+      }
+
+      .box3 {
+        width: 100%;
+        height: 50px;
+        background: lightcoral;
+      }
+
+      .box4 {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background: lightseagreen;
+      }
+    </style>
+
+    <h2>max-width(최대 가로 사이즈)</h2>
+    <div class="maxw">max-width</div>
+    <div class="minw">min-width</div>
+
+    <style>
+      .maxw {
+        max-width: 1280px;
+        max-height: 500px;
+        /* width: 100%; */
+        height: 600px;
+        background: lightpink;
+        margin: 0 auto;
+      }
+      .minw {
+        min-width: 320px;
+        min-height: 100vh;
+        background: rosybrown;
+      }
+    </style>
+
+    <h2>border</h2>
+    <div class="border">border</div>
+    <style>
+      .border {
+        height: 300px;
+        background: gray;
+        /* border-style: dashed;
+            border-width: 5px;
+            border-color: rgba(255, 0, 0, 0.5); */
+        /* border-bottom: 1px solid rgb(255, 86, 86); */
+        /* border: none; */
+        border-radius: 300px;
+      }
+    </style>
+    <h2>border-radius</h2>
+    <div class="radius"></div>
+    <div class="radius2"></div>
+    <style>
+      .radius {
+        height: 200px;
+        border-radius: 200px;
+        width: 200px;
+        height: 200px;
+        background: lightsalmon;
+      }
+      .radius2 {
+        height: 200px;
+
+        border-radius: 100%;
+        background: lightseagreen;
+      }
+    </style>
+    <h2>padding</h2>
+    <div class="padding">padding</div>
+    <div class="padding">padding 패딩은 따뜻해요</div>
+    <div class="padding">padding</div>
+    <style>
+      /* 유동적인 버튼을 만들고 싶을 때  */
+      /* display: inline-block으로 변경을 위해 width:100% 해제 */
+      /* 이후, padding으로 여백 조절 */
+      /* 가로사이즈 없으면 -> 글자에 따라 유동적으로 / 가로사이즈 있으면 -> 정해진 모양으로 */
+      .padding {
+        display: inline-block;
+        width: 200px;
+        border: 3px solid palevioletred;
+        background: lightcyan;
+        padding: 20px;
+      }
+    </style>
+
+    <div class="padding2">padding2</div>
+    <style>
+      .padding2 {
+        display: inline-block;
+        padding: 20px 30px;
+        margin-top: 50px;
+        border: 2px solid blueviolet;
+        background: lightcyan;
+      }
+    </style>
+
+    <h2>margin</h2>
+    <div class="margin">margin</div>
+    <div class="margin box">margin box</div>
+    <div class="margin">margin</div>
+    <div class="margin2">
+      block 요소 가운데 정렬
+      <div class="margin3">가운데 정렬</div>
+    </div>
+
+    <style>
+      .margin {
+        padding: 50px;
+        margin: 30px;
+        border: 2px solid peru;
+        background: peachpuff;
+      }
+      .box {
+        margin-top: 120px;
+      }
+      .margin2 {
+        margin: auto;
+        /* div 박스 자체를 가운데정렬하기-> 사방으로 auto가 들어감 */
+        width: 300px;
+        height: 200px;
+        border: 2px solid olivedrab;
+        background: lightgray;
+        text-align: center;
+      }
+      .marign3 {
+        width: 50%;
+      }
+    </style>
+    <br />
+    <hr />
+
+    <!-- just 쇼핑몰 -->
+    <div class="wrap">
+      <header class="header">header 100px</header>
+      <div class="slide">slide 300px</div>
+      <main class="main">main 200px</main>
+      <footer class="footer">footer 100px</footer>
+    </div>
+
+    <style>
+      .wrap {
+        width: 1200px;
+        margin: 200px auto 0;
+        background: lavender;
+        text-align: center;
+        /* 실무에서는 전체에 넣으면 안 됨 */
+      }
+
+      .header {
+        padding: 30px;
+        height: 100px;
+        border-bottom: 5px solid #000;
+        /* box-sizing: border-box; 원하는 박스사이즈로=> 리셋에 들어가주기 */
+        /* box-sizing: content-box; 기존 css2 방식으로 */
+        box-sizing: border-box;
+      }
+      .slide {
+        height: 300px;
+        border: 5px solid blueviolet;
+      }
+      .main {
+        width: 90%;
+        margin: 20px auto;
+        height: 180px;
+        padding-top: 70px;
+        border: 5px solid green;
+      }
+      .footer {
+        height: 100px;
+        border: 5px solid skyblue;
+      }
+    </style>
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+  </body>
+</html>
