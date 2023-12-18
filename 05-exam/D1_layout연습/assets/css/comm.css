@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  color: #222;
+  list-style: none;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  margin: 0 auto;
+  height: 100vh;
+  background: lightgoldenrodyellow;
+}
+#header {
+  height: 100px;
+  background: lightsteelblue;
+}
+
+.content {
+  display: flex;
+  height: calc(100vh - 200px);
+}
+
+#main {
+  flex-grow: 1;
+  background: lightpink;
+}
+
+#aside {
+  width: 300px;
+  background: lightseagreen;
+}
+
+#footer {
+  height: 100px;
+  background: lightskyblue;
+}

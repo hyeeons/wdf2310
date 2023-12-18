@@ -1,0 +1,173 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 1200px;
+  height: 700px;
+  margin: auto;
+  background: lightblue;
+}
+
+/* header */
+#header {
+  background-color: lightpink;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo a {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  background: lightcoral;
+}
+/* 질문1. logo 이미지는 디자인이니까 css에 넣는가? */
+/* 질문2. logo가 아닌 logo의 a를 잡는 이유? */
+/* 질문3. logo a에 display flex 적용 이유? */
+
+#gnb .depth1 {
+  display: flex;
+}
+
+#gnb .depth2 {
+  display: none;
+}
+
+#gnb .depth1:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+#gnb .depth1:hover .depth2 {
+  display: block;
+  text-align: center;
+}
+/* 질문4. display:content랑 차이? */
+
+#gnb .depth1 > li > a {
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+/* 현정코딩 */
+/* #gnb .depth1 > li > a {
+  display: flex;
+  width: 130px;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+} */
+
+/* slide */
+
+.slide ul {
+  display: flex;
+}
+
+/* li나 a가 아닌 이유 -> 자식이 3명인 엄마를 찾아야 함 */
+
+.slide ul a {
+  display: block;
+  height: 300px;
+  background: lightgrey;
+}
+
+.slide ul img {
+  display: block;
+  width: 1200px;
+  height: 300px;
+}
+
+/* main */
+
+#main {
+  height: 200px;
+  background: lightgreen;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sec-g {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0;
+}
+
+.sec-g .sec-tit {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+/* 공지사항 */
+.sec-bbs .list-bbs a {
+  display: block;
+  padding: 5px 0;
+}
+
+.sec-bbs .list-bbs li {
+  display: flex;
+  align-items: center;
+}
+.sec-bbs .list-bbs li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: blue;
+  margin-right: 10px;
+}
+
+.sec-bnr .sec-tit {
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+/* 갤러리 */
+
+.sec-gal .list-gal li {
+  display: flex;
+  background: lightseagreen;
+  align-items: center;
+}
+
+.sec-gal .list-gal a {
+  display: block;
+  width: 33.3333%;
+  padding: 10px;
+}
+
+.sec-gal .list-gal img {
+  display: block;
+  width: 100%;
+}
+
+/* 배너 */
+
+.sec-bnr img {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+#footer {
+  /* background: lavender; */
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid gray;
+}

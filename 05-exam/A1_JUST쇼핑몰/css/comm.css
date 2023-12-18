@@ -1,0 +1,195 @@
+* {
+  /* reset */
+  /* 웹디자인기능사 볼 때 외울 것 */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  text-decoration: none;
+  color: #222328;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.wrap {
+  width: 1200px;
+  margin: auto;
+  background: lightyellow;
+}
+
+#header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: lightpink;
+}
+
+#logo a {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  align-items: center;
+  background: lightgreen;
+}
+
+#gnb .depth1 {
+  display: flex;
+}
+
+#gnb .depth2 {
+  display: none;
+}
+
+#gnb .depth1:hover {
+  background: lightsalmon;
+}
+
+/* #gnb .depth1:hover .depth2 {
+  display: block;
+  background: white;
+} */
+
+#gnb .depth1 > li > a {
+  display: flex;
+  height: 100px;
+  padding: 40px 40px;
+  align-items: center;
+}
+
+.slide ul {
+  display: flex;
+}
+/* 자식이 3명인 애를 찾아야 함 */
+
+.slide ul a {
+  display: block;
+  background: lightsalmon;
+}
+/* 슬라이드 부분 a태그를 이미지가 감쌀 수 있도록 : 인라인 -> 블럭 => a태그에서 display:block은 해줘도 되고 안해줘도 됨 */
+
+.slide ul img {
+  display: block;
+}
+/* 아래 색이 보인다. 왜? => 이미지도 인라인 태그임 -> 스페이스(엔터)가 먹어서 아래 보임 -> 이미지도 블럭으로 바꿔줘야 함 */
+
+/* layout 잡을 때에는 id사용 */
+/* logo, header, main, footer */
+
+#main {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sec-g {
+  /* width: 33.333%; */
+  flex-grow: 1;
+  /* 1:true (참),  0:false(거짓)*/
+  flex-basis: 0;
+  /* 너비가 똑같이 나오도록 */
+  padding: 10px 0;
+}
+
+.sec-g .sec-tit {
+  font-size: 20px;
+  /* padding: 0 0 10px 0; 가능 */
+  margin-bottom: 10px;
+}
+
+/* bbs */
+.sec-bbs .list-bbs a {
+  /* width: 100%; a태그는 인라인요소라 w100% 안써줘도 100%가 됨*/
+  display: block;
+  padding: 5px 0;
+  /* 원래는 이렇게x 포지션 사용함  */
+}
+
+/* .sec-bbs .list-bbs a::before {
+  content: "-";
+a태그에 넣는법 
+} */
+
+.sec-bbs .list-bbs li {
+  display: flex;
+  align-items: center;
+}
+.sec-bbs .list-bbs li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: red;
+  margin-right: 10px;
+}
+
+/* bnr */
+
+.sec-bnr .sec-tit,
+.sec-goto .sec-tit {
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 0;
+  margin-bottom: 0;
+}
+
+/* goto */
+
+/* 현정코딩 */
+/* .sec-goto ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+/* .sec-goto ul li a {
+  display: block;
+  width: 195px;
+  height: 97.5px;
+  text-align: center;
+  padding: 40px;
+  background-color: lightseagreen;
+  border: 1px solid lavender;
+} */
+
+/* 선생님코딩 */
+.sec-goto .list-goto {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.sec-goto .list-goto li {
+  background: lightblue;
+  width: 48%;
+  height: 48%;
+}
+
+/* .sec-goto .list-goto li {
+  background: lightblue;
+  width: 48%;
+  height: 48%;
+  text-align: center;
+  padding: 40px;
+} */
+
+/* 위 : a태그가 너무 작아서 누르기 어려움 => a태그 키워줘야 */
+
+.sec-goto .list-goto a {
+  display: block;
+  height: 100%;
+  text-align: center;
+  line-height: 85px;
+  /* 높이만큼 행간을 넣어주거나 padding top으로 하거나 가운데정렬 
+  아니면 flex 이용 => 요즘많이 사용*/
+}
+#footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid gray;
+}
