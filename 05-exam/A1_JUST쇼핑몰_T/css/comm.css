@@ -27,6 +27,8 @@
   /* background: lightyellow; */
 }
 
+/* 메인  pc-> 타블렛 -> 모바일 상속 */
+
 /* 공통 - 태블릿*/
 @media screen and (max-width: 980px) {
   .wrap {
@@ -108,7 +110,7 @@
   padding: 0 50px;
 }
 
-/* tablet */
+/* 헤더 tablet */
 @media screen and (max-width: 980px) {
   #header {
     flex-direction: column;
@@ -126,36 +128,24 @@
     height: 50px;
   }
   #gnb .depth2 {
-    width: 50px;
+    top: 50px;
   }
 }
-/* pc-> 타블렛 -> 모바일 상속 */
 
-/* 메인 - 모바일 */
+/* 헤더 - 모바일 */
 @media screen and (max-width: 430px) {
   /* #gnb .depth1 > li > a {
-    padding: 0 20px; */
+	  padding: 0 20px; */
   #gnb {
     width: 100%;
     overflow-x: auto;
   }
   #gnb .depth1 > li > a {
-    white-space: nowrap;
-  }
-  #gnb .depth1 {
-    /* overflow: hidden; */
-  }
-  .sec-bnr,
-  .sec-goto {
-    width: 100%;
-  }
-
-  .sec-bnr img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    padding: 0 20px;
   }
 }
+
+/* 메인 - 모바일 */
 
 /* 슬라이드 구현 */
 .slide {
@@ -319,6 +309,19 @@ a태그에 넣는법
 	또는 gap을 위에서0으로 한 후 justify 설정해도 됨 */
     /* 또는 아래처럼 계산해서 할 수도 있음 */
     width: calc(100% / 2 - 10px);
+  }
+}
+
+/* 메인 - 모바일 */
+@media screen and (max-width: 430px) {
+  .sec-bnr,
+  .sec-goto {
+    width: 100%;
+  }
+  .sec-bnr img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
   }
 }
 
