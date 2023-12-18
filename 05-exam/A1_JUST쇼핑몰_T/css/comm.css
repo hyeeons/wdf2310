@@ -20,7 +20,8 @@
 }
 /* 시각장애인들에게는 보이고 일반인들에게는 보이지 않음 */
 .wrap {
-  width: 1200px;
+  /* 최대 1200까지 늘어나라! */
+  max-width: 1200px;
   margin: auto;
   /* background: lightyellow; */
 }
@@ -88,6 +89,14 @@
   padding: 40px 40px;
   align-items: center;
   padding: 0 50px;
+}
+
+/* tablet */
+@media screen and (max-width: 980px) {
+  #header {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 /* 슬라이드 구현 */
