@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow</title>
+  </head>
+  <body>
+    <h1>overflow</h1>
+    <div class="box1">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+    </div>
+
+    <style>
+      .box1 {
+        overflow: hidden;
+        overflow-x: auto;
+        /* shrink로 (박스밖으로) 나간 아이들 숨겨줘  */
+        width: 100px;
+        display: flex;
+        border: 1px solid #000;
+      }
+
+      .item {
+        flex-shrink: 0;
+        /*shrink: 축소해라 / flex-shrink:0 => 축소하지마 */
+        width: 100%;
+        height: 100px;
+        background: lightblue;
+      }
+
+      .slide ul {
+        overflow: auto;
+      }
+    </style>
+
+    <h2>이용약관</h2>
+    <div class="container">
+      <b>여러분을 환영합니다.</b> <br /><br />Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Vero odio quis ratione praesentium ullam
+      culpa corrupti, molestias molestiae ea minima sapiente iste accusamus,
+      dolorum vel veritatis perferendis animi consequatur eaque et. Quidem
+      incidunt nemo quae harum veniam impedit commodi architecto sapiente? Porro
+      dignissimos quaerat ad natus aut sed expedita voluptas, dolorum asperiores
+      ea, nostrum minus, veniam omnis assumenda id? Illum deleniti voluptas,
+      aliquid impedit inventore repudiandae sit nostrum odit porro tenetur
+      perferendis quibusdam soluta consequuntur a dolores optio. Ipsam obcaecati
+      alias est ad magni ut recusandae delectus autem pariatur voluptate
+      consequatur, harum adipisci repudiandae culpa architecto officiis minus
+      ipsa. Ipsa. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      Minus maiores officia reiciendis saepe aspernatur exercitationem at libero
+      labore veniam? Aliquid a fugit ad beatae perspiciatis tenetur aperiam
+      nulla vero illo expedita minima facilis nesciunt, consequuntur autem
+      nostrum quaerat unde nihil aspernatur. In rerum asperiores nisi
+      praesentium natus at voluptatibus libero numquam sequi, laudantium error
+      accusantium dicta saepe hic a? Eveniet voluptatem aliquam ea ipsum illo
+      pariatur amet veniam corporis numquam iure autem tempore possimus in ab
+      praesentium delectus, similique voluptates doloribus excepturi totam
+      deserunt deleniti nesciunt commodi doloremque. Assumenda nam consequuntur
+      quasi illo amet, iusto facilis nostrum magni. Deleniti, porro!
+    </div>
+
+    <style>
+      .container {
+        max-width: 500px;
+        /* 가로사이즈 0~500 */
+        height: 300px;
+        overflow: hidden;
+        overflow: scroll;
+        overflow: auto;
+        margin: 0 auto;
+        border: 5px solid blueviolet;
+      }
+    </style>
+  </body>
+</html>

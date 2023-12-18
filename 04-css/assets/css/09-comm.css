@@ -10,7 +10,7 @@
 }
 
 .box1 .item {
-  float: right;
+  float: left;
   width: 100px;
   height: 100px;
   background-color: lightcoral;
@@ -23,6 +23,7 @@
 }
 
 #header {
+  /* 1. 부모에게 높이값 지정 */
   height: 100px;
   background: greenyellow;
 }
@@ -43,7 +44,74 @@
   float: left;
 }
 
+.slide {
+  overflow: auto;
+}
+
+.slide ul {
+  overflow: auto;
+}
 .slide li {
   float: left;
-  float: none;
+
+  background: lightcyan;
+}
+
+.box1 {
+  float: left;
+}
+.box2 {
+  clear: both;
+}
+
+#main::after {
+  content: "";
+  display: block;
+  clear: both;
+  /* clear: both => float 해제해줘 */
+  /* main에게 넣어주는 것이 아닌 after 가상공간에 만들어 주는 것  */
+}
+#main .sec-g {
+  width: 30%;
+  height: 200px;
+  float: left;
+  background: lavenderblush;
+  border: 1px solid #000;
+}
+
+.sec-g + .sec-g {
+  margin-left: 5%;
+  /* sec-g 옆에 있는 sec-g에 왼쪽 마진10% */
+}
+
+/* #footer {
+  background: lightgray;
+}
+
+#footer .footer-g {
+  float: left;
+  width: 33.333%;
+  height: 100px;
+  background: lightgoldenrodyellow;
+}
+
+.copyright {
+  text-align: center;
+} */
+
+#footer {
+  height: 100px;
+}
+
+.ft-logo {
+  float: left;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.sns {
+  float: right;
+  margin-top: -20px;
 }

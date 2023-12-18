@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+  </head>
+  <body>
+    <h1>position</h1>
+
+    <div class="container relative">
+      <div class="inner">
+        <div class="fixed">fixed</div>
+        <!-- fixed의 기준: body
+	   -->
+        <div class="box sta">static</div>
+        <div class="box rel1">relative1</div>
+        <div class="box rel2">relative2</div>
+        <div class="box rel3">relative3</div>
+        <!-- relative는 나 자신이 기준임 / 기준을 하늘에 띄워서 돌아다니게 사용X-->
+        <div class="box abs1">absolute1</div>
+        <div class="box-rel">
+          <div class="box abs2">absolute2</div>
+          <div class="box abs3">absolute3</div>
+        </div>
+      </div>
+      <!-- absolute : 절댓값으로 위치 지정 -->
+
+      <style>
+        .container {
+          position: relative;
+          background: lightblue;
+          height: 200vh;
+        }
+        .box {
+          width: 200px;
+          height: 200px;
+          background: greenyellow;
+        }
+
+        .sta {
+          position: static;
+        }
+
+        .rel2 {
+          right: 0;
+          top: 400px;
+        }
+
+        .rel1,
+        .rel2,
+        .rel3 {
+          position: relative;
+        }
+        /* 기준으로 넣어도 다른 곳으로 가면 자리는 그대로 남으니까 자식들에게 relative는 쓰지 말것
+		
+		*/
+        .abs1 {
+          position: absolute;
+          top: 150px;
+          right: 0;
+          background: lightcoral;
+          z-index: 1500;
+        }
+        /* position: absolute는 짝꿍이 있음
+	position: relative; (기준) - 적용 안하면 body가 기준이 됨
+	position: absolute (자식)
+	top0
+	left0
+	4개가 짝꿍임!
+	기준은 부모 중에 나와 가장 가까운 부모가 기준임 */
+
+        .inner {
+          position: relative;
+        }
+        .box-rel {
+          width: 300%;
+          height: 500px;
+          position: absolute;
+          right: 0;
+          bottom: 50px;
+          background: lightseagreen;
+        }
+
+        .abs2 {
+          position: absolute;
+          background: lightblue;
+        }
+      </style>
+
+      <style>
+        .fixed {
+          position: fixed;
+          top: 0;
+          left: 0;
+          /* right: 0;
+          bottom: 0; */
+          width: 100%;
+          height: 70px;
+          background: lightslategray;
+          z-index: 1000;
+          /* header부분은 일반적으로1000 / 메인 안에서는 100~ 이런식으로 바운더리를 만들어야 함 */
+        }
+      </style>
+      <div class="wrap">
+        <div class="rel">
+          <div class="sticky sticky1">sticky</div>
+        </div>
+        <div class="rel">
+          <div class="sticky sticky1">sticky</div>
+        </div>
+        <div class="rel">
+          <div class="sticky sticky1">sticky</div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .rel {
+        position: relative;
+        height: 100vh;
+        background: lightsalmon;
+        border: 5px solid yellow;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background: blue;
+      }
+    </style>
+
+    <h2>가운데 정렬</h2>
+    <div class="center">
+      <div class="item"></div>
+    </div>
+    <style>
+      .center {
+        height: 500px;
+        background: lightblue;
+        position: relative;
+      }
+
+      .item {
+      }
+    </style>
+  </body>
+</html>

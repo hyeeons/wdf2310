@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position 가운데정렬</title>
+  </head>
+  <body>
+    <h2>가운데 정렬</h2>
+    <div class="center">
+      <div class="item">가운데정렬</div>
+    </div>
+    <style>
+      h2 {
+        /* 방법1) text-align: center; */
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        background: lavender;
+      }
+
+      .center {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background: lightblue;
+        margin-bottom: 50px;
+      }
+
+      .center .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 200px;
+        /* text 가운데정렬 : 1) flex 사용해서 justify center와 text align center / 2) flex 사용 안하면 text-align:center와 line-height 높이값200px만큼 넣어주기 */
+        /* margin: -100px 0 0 -100px; */
+
+        /* margin 쓰거나 transform 둘 중 하나사용할 수 있음  */
+        /* margin은 부모기준 / transform은 자신을 기준으로 */
+        background: lightgoldenrodyellow;
+      }
+    </style>
+  </body>
+</html>
