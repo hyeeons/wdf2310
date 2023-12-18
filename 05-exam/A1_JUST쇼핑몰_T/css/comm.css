@@ -19,11 +19,26 @@
   line-height: 0;
 }
 /* 시각장애인들에게는 보이고 일반인들에게는 보이지 않음 */
+
 .wrap {
   /* 최대 1200까지 늘어나라! */
   max-width: 1200px;
   margin: auto;
   /* background: lightyellow; */
+}
+
+/* 공통 - 태블릿*/
+@media screen and (max-width: 980px) {
+  .wrap {
+    padding: 0 30px;
+  }
+}
+
+/* 공통 - 모바일 */
+@media screen and (max-width: 430px) {
+  .wrap {
+    padding: 0 15px;
+  }
 }
 
 #header {
@@ -39,6 +54,7 @@
   display: flex;
   width: 200px;
   height: 40px;
+  font-size: 20px;
   align-items: center;
   background: lightgreen;
 }
@@ -81,6 +97,7 @@
 
 #gnb .depth1 li:hover .depth2 {
   display: block;
+  z-index: 100;
 }
 
 #gnb .depth1 > li > a {
@@ -96,6 +113,47 @@
   #header {
     flex-direction: column;
     height: auto;
+  }
+
+  #logo a {
+    height: auto;
+    padding: 20px 0 10px;
+    /* margin-top: 20px; */
+    align-items: center;
+    justify-content: center;
+  }
+  #gnb .depth1 > li > a {
+    height: 50px;
+  }
+  #gnb .depth2 {
+    width: 50px;
+  }
+}
+/* pc-> 타블렛 -> 모바일 상속 */
+
+/* 메인 - 모바일 */
+@media screen and (max-width: 430px) {
+  /* #gnb .depth1 > li > a {
+    padding: 0 20px; */
+  #gnb {
+    width: 100%;
+    overflow-x: auto;
+  }
+  #gnb .depth1 > li > a {
+    white-space: nowrap;
+  }
+  #gnb .depth1 {
+    /* overflow: hidden; */
+  }
+  .sec-bnr,
+  .sec-goto {
+    width: 100%;
+  }
+
+  .sec-bnr img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
   }
 }
 
@@ -239,6 +297,31 @@ a태그에 넣는법
   /* 높이만큼 행간을 넣어주거나 padding top으로 하거나 가운데정렬 
   아니면 flex 이용 => 요즘많이 사용*/
 }
+
+/* 메인 - 타블렛 */
+@media screen and (max-width: 980px) {
+  #main {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .sec-g {
+    flex-basis: auto;
+    flex-grow: 0;
+  }
+  .sec-bbs {
+    width: 100%;
+  }
+  .sec-bnr,
+  .sec-goto {
+    /* gap : 20px 빼고 width설정 48%
+	또는 gap을 위에서0으로 한 후 justify 설정해도 됨 */
+    /* 또는 아래처럼 계산해서 할 수도 있음 */
+    width: calc(100% / 2 - 10px);
+  }
+}
+
 #footer {
   height: 100px;
   display: flex;
@@ -246,6 +329,19 @@ a태그에 넣는법
   align-items: center;
   border-top: 2px solid gray;
 }
+
+/* 태블릿 - 풋터 */
+@media screen and (max-width: 980px) {
+  #footer {
+    height: auto;
+    /* flex-direction: column; 또는 */
+    display: block;
+    text-align: center;
+    background: lightgray;
+    padding: 20px 0;
+  }
+}
+
 .swiper {
   width: 100%;
   height: 300px;
