@@ -1,12 +1,24 @@
+/* 전역변수설정 (모든 파일 통일시키겠다)  */
+/* 주조색 : primary */
+:root {
+  --default: #222328;
+  --primary: orange;
+  --white: #fff;
+  --black: #000;
+  --widthwrap: 1200px;
+  --minHeight: calc(100vh - 100px - 100px - 300px);
+  --hdHeight: 100px;
+  --ftHeight: 100px;
+}
+/* reset */
+/* 웹디자인기능사 볼 때 외울 것 */
 * {
-  /* reset */
-  /* 웹디자인기능사 볼 때 외울 것 */
   margin: 0;
   padding: 0;
   line-height: 1.5;
   font-size: 16px;
   text-decoration: none;
-  color: #222328;
+  color: var(--default);
   box-sizing: border-box;
   list-style: none;
 }
@@ -22,7 +34,7 @@
 
 .wrap {
   /* 최대 1200까지 늘어나라! */
-  max-width: 1200px;
+  max-width: var(--widthwrap);
   margin: auto;
   /* background: lightyellow; */
 }
@@ -58,7 +70,7 @@
   height: 40px;
   font-size: 20px;
   align-items: center;
-  background: lightgreen;
+  background: var(--primary);
 }
 
 #gnb .depth1 {
@@ -78,7 +90,7 @@
   /* right: 0; */
   top: 100px;
   left: 0;
-  background: lightcoral;
+  background: var(--primary);
   z-index: 1;
   align-items: center;
   text-align: center;
@@ -94,7 +106,7 @@
 }
 
 #gnb .depth1:hover {
-  background: white;
+  background: var(--white);
 }
 
 #gnb .depth1 li:hover .depth2 {
@@ -165,7 +177,7 @@
 
 .slide ul a {
   display: block;
-  background: lightsalmon;
+  background: var(--primary);
 }
 /* 슬라이드 부분 a태그를 이미지가 감쌀 수 있도록 : 인라인 -> 블럭 => a태그에서 display:block은 해줘도 되고 안해줘도 됨 */
 
@@ -221,7 +233,7 @@ a태그에 넣는법
   display: inline-block;
   width: 5px;
   height: 5px;
-  background: red;
+  background: var(--primary);
   margin-right: 10px;
 }
 
@@ -373,7 +385,7 @@ a태그에 넣는법
 .modal {
   width: 500px;
   height: 300px;
-  background-color: white;
+  background-color: var(--white);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -405,7 +417,7 @@ a태그에 넣는법
   background-color: black;
   border-radius: 50px;
   border: none;
-  color: white;
+  color: var(--white);
 }
 
 /* position: absolute가 있으면 얘도 기준이 되어서 relative안 넣어도 됨 */
@@ -418,6 +430,6 @@ a태그에 넣는법
 }
 
 .modal i {
-  color: white;
+  color: var(--white);
   font-size: 2rem;
 }
