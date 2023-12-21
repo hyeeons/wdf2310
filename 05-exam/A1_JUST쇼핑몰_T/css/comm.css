@@ -116,9 +116,11 @@
 #gnb .depth1:hover {
   background: var(--white);
 }
+
 /* li에 마우스 오버시 전체메뉴 보이게 */
 /* #gnb .depth1 :hover .depth2 { */
 /* li에 마우스 오버시 개별메뉴 보이게 */
+
 #gnb .depth1 li:hover .depth2 {
   /* display: block; */
   /* opacity: 1; */
