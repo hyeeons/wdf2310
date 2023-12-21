@@ -9,14 +9,16 @@
   --minHeight: calc(100vh - 100px - 100px - 300px);
   --hdHeight: 100px;
   --ftHeight: 100px;
+  --swiper-theme-color: #00ff97;
 }
+
 /* reset */
 /* 웹디자인기능사 볼 때 외울 것 */
 * {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 16px; /* 기준폰트 */
   text-decoration: none;
   color: var(--default);
   box-sizing: border-box;
@@ -68,7 +70,7 @@
   display: flex;
   width: 200px;
   height: 40px;
-  font-size: 20px;
+  font-size: 1.25rem;
   align-items: center;
   background: var(--primary);
 }
@@ -82,10 +84,14 @@
 }
 
 #gnb .depth2 {
-  display: none;
+  /* display: none; */
+  /* opacity: 0;
+  visibility: hidden; */
   position: absolute;
   width: 100%;
-  height: 150px;
+  height: 0;
+  opacity: 0;
+  /* 높이값 0, opacity 사용, visiabilty 사용, 안 줄여진다면 padding0, overflow:hidden 사용 */
   /* 가로 100% 하는 법 : width100% 또는 right 0 */
   /* right: 0; */
   top: 100px;
@@ -95,9 +101,11 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding: 3px 10px;
+  padding: 10px 10px;
+  transition: all 0.3s;
 
-  /* display: none; */
+  /* display: none은 transition이 먹지 않음; */
+  /* opacity, visibility는 실무x  */
 }
 
 #gnb .depth2 a {
@@ -108,9 +116,15 @@
 #gnb .depth1:hover {
   background: var(--white);
 }
-
+/* li에 마우스 오버시 전체메뉴 보이게 */
+/* #gnb .depth1 :hover .depth2 { */
+/* li에 마우스 오버시 개별메뉴 보이게 */
 #gnb .depth1 li:hover .depth2 {
-  display: block;
+  /* display: block; */
+  /* opacity: 1; */
+  /* visibility: visible; */
+  opacity: 1;
+  height: 150px;
   z-index: 100;
 }
 
@@ -206,7 +220,7 @@
 }
 
 .sec-g .sec-tit {
-  font-size: 20px;
+  font-size: 1.125rem;
   /* padding: 0 0 10px 0; 가능 */
   margin-bottom: 10px;
 }
@@ -398,12 +412,12 @@ a태그에 넣는법
 }
 
 .modal .modal-hd {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
 .modal .modal-bd {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 10px;
 }
 
