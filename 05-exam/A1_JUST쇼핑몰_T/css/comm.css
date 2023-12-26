@@ -175,17 +175,44 @@
 
 /* 메인 - 모바일 */
 
-/* 슬라이드 구현 */
+/* 슬라이드 구현 - 애니메이션 */
 .slide {
   overflow: hidden;
   position: relative;
+  width: 1200px;
   height: 300px;
+  left: 60px;
 }
 .slide ul {
   display: flex;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50px;
+  animation: ani-slide 10s infinite;
+}
+
+@keyframes ani-slide {
+  0% {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  33% {
+    left: -100%;
+  }
+  62% {
+    left: -100%;
+  }
+  64% {
+    left: -200%;
+  }
+  96% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
 }
 /* 슬라이드를 위로 띄워야함 */
 
@@ -195,12 +222,15 @@
   display: block;
   background: var(--primary);
 }
+
 /* 슬라이드 부분 a태그를 이미지가 감쌀 수 있도록 : 인라인 -> 블럭 => a태그에서 display:block은 해줘도 되고 안해줘도 됨 */
 
 .slide ul img {
   display: block;
 }
-/* 아래 색이 보인다. 왜? => 이미지도 인라인 태그임 -> 스페이스(엔터)가 먹어서 아래 보임 -> 이미지도 블럭으로 바꿔줘야 함 */
+
+/* 아래 색이 보인다. 왜? => 이미지도 인라인 태그임 -> 스페이스
+(엔터)가 먹어서 아래 보임 -> 이미지도 블럭으로 바꿔줘야 함 */
 
 /* layout 잡을 때에는 id사용 */
 /* logo, header, main, footer */
