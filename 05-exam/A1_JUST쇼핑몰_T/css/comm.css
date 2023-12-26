@@ -10,6 +10,7 @@
   --hdHeight: 100px;
   --ftHeight: 100px;
   --swiper-theme-color: #00ff97;
+  --lightgray: gray;
 }
 
 /* reset */
@@ -37,7 +38,7 @@
 .wrap {
   /* 최대 1200까지 늘어나라! */
   max-width: var(--widthwrap);
-  margin: auto;
+  margin: 0 auto;
   /* background: lightyellow; */
 }
 
@@ -114,9 +115,12 @@
 }
 
 #gnb .depth1:hover {
-  background: var(--white);
+  background: var(--gray);
 }
 
+#gnb .depth1 > li > a:hover {
+  background: red;
+}
 /* li에 마우스 오버시 전체메뉴 보이게 */
 /* #gnb .depth1 :hover .depth2 { */
 /* li에 마우스 오버시 개별메뉴 보이게 */
@@ -181,7 +185,7 @@
   position: relative;
   width: 1200px;
   height: 300px;
-  left: 60px;
+  margin: 0 auto;
 }
 .slide ul {
   display: flex;
