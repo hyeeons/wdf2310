@@ -193,3 +193,6 @@ a태그에 넣는법
   align-items: center;
   border-top: 2px solid gray;
 }
+#footer .logo img {
+  filter: grayscale(100%);
+}
