@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="./css/comm.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 제이쿼리는 제일 위에 있어야 함! -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script defer src="./js/comm.js"></script>
+    <script src="./js/comm.js"></script>
   </head>
 
   <body>
@@ -122,26 +123,50 @@
       </div>
       <main id="main">
         <!-- 공지사항 섹션 -->
-        <section class="sec-g sec-bbs">
-          <h2 class="sec-tit">공지사항</h2>
-          <ul class="list-bbs">
-            <li>
-              <a href="#">Lorem ipsum dolor sit amet.</a>
-            </li>
-            <li>
-              <a href="#">Lorem ipsum dolor sit amet.</a>
-            </li>
-            <li>
-              <a href="#">Lorem ipsum dolor sit amet.</a>
-            </li>
-            <li>
-              <a href="#">Lorem ipsum dolor sit amet.</a>
-            </li>
-            <li>
-              <a href="#">Lorem ipsum dolor sit amet.</a>
-            </li>
-          </ul>
-        </section>
+        <div id="tabs" class="tabs">
+          <section class="sec-g sec-bbs active">
+            <h2 class="sec-tit">공지사항</h2>
+            <ul class="tab-cont list-bbs">
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+            </ul>
+          </section>
+          <section class="sec-g sec-gallery active">
+            <h2 class="sec-tit">
+              갤러리
+              <ul class="tab-cont list-gallery">
+                <li>
+                  <a href="#"
+                    ><img src="./images/thumb-gallery.jpg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./images/thumb-gallery.jpg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./images/thumb-gallery.jpg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </h2>
+          </section>
+        </div>
         <!-- 배너 섹션 -->
         <section class="sec-g sec-bnr">
           <h2 class="sec-tit">배너</h2>
