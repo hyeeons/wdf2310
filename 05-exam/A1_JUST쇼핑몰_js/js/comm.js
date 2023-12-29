@@ -1,11 +1,11 @@
 // 슬라이드
-$("#gnb .depth1 > li").on("mouseenter", function () {
-  $(this).find(".depth2").stop().slideDown(300);
-});
 
 // html 페이지를 로드한 후 실행
 // $(document).ready(function () {});
 $(function () {
+  $("#gnb .depth1 > li").on("mouseenter", function () {
+    $(this).find(".depth2").stop().slideDown(300);
+  });
   // 모달창 열기
   //   .list-bbs li:first-child를 클릭했을 때
   //   on : 바닐라자바스크립트에서의 addEvent

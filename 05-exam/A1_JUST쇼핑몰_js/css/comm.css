@@ -85,12 +85,12 @@
 }
 
 #gnb .depth2 {
-  /* display: none; */
+  display: none;
   /* opacity: 0;
   visibility: hidden; */
   position: absolute;
   width: 100%;
-  height: 0;
+  /* height: 0; */
   /* 높이값 0, opacity 사용, visiabilty 사용, 안 줄여진다면 padding0, overflow:hidden 사용 */
   /* 가로 100% 하는 법 : width100% 또는 right 0 */
   /* right: 0; */
