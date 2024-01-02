@@ -177,49 +177,26 @@
   height: 300px;
   margin: 0 auto;
 }
-.slide ul {
+.slide .list-slide {
   display: flex;
   position: absolute;
   top: 0;
   left: 50px;
-  animation: ani-slide 10s infinite;
+  transition: left 0.3s;
 }
 
-@keyframes ani-slide {
-  0% {
-    left: 0;
-  }
-  30% {
-    left: 0;
-  }
-  33% {
-    left: -100%;
-  }
-  62% {
-    left: -100%;
-  }
-  64% {
-    left: -200%;
-  }
-  96% {
-    left: -200%;
-  }
-  100% {
-    left: 0;
-  }
-}
 /* 슬라이드를 위로 띄워야함 */
 
 /* 자식이 3명인 애를 찾아야 함 */
 
-.slide ul a {
+.slide .list-slide a {
   display: block;
   background: var(--primary);
 }
 
 /* 슬라이드 부분 a태그를 이미지가 감쌀 수 있도록 : 인라인 -> 블럭 => a태그에서 display:block은 해줘도 되고 안해줘도 됨 */
 
-.slide ul img {
+.slide .list-slide img {
   display: block;
 }
 
