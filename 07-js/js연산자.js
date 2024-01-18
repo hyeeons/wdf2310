@@ -94,4 +94,46 @@ console.log(true || true); // true
 console.log(true || false); // true
 console.log(false || false); //false
 
-//병합 연산자
+// ?? 병합 연산자
+// || 연산자와 비슷하다.
+// null 또는 undefined는 제외하고 반환한다.
+// 0은 falsy 값이지만 null 또는 undefined가 아니므로 0이 반환된다
+console.log("병합연산자입니다.");
+console.log(0 || 5); // 5
+console.log(0 ?? 5); // 0
+console.log(null ?? undefined); // undefined
+
+// 삼항 연산자
+// 조건 ? 참일때 : 거짓일때
+console.log("삼항연산자입니다.");
+console.log(1 < 2 ? "참" : "거짓");
+console.log(1 > 2 ? "참" : "거짓");
+
+function isCat(name) {
+  return name === "고양이" ? "고양이 맞음" : "고양이 아님";
+}
+console.log(isCat("고양이"));
+console.log(isCat("강아지"));
+
+// 전개 연산자
+// ...을 사용하여 배열이나 객체를 펼칠 수 있음
+
+// 1) 배열의 전개
+const num1 = [1, 2, 3];
+const num2 = [4, 5, 6];
+console.log("전개연산자입니다.");
+console.log(num1.concat(num2));
+console.log([...num1, ...num2]);
+
+// 2) 객체의 전개
+const dog = {
+  name: "멍멍이",
+  phone: "010-1234-5678",
+};
+
+const dogInfo = {
+  ...dog,
+  age: 2,
+};
+
+console.log(dogInfo);
