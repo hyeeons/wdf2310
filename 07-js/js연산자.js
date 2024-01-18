@@ -1,5 +1,5 @@
 // 연산자
-console.log("지금 부터는 연산자 입니다.");
+console.log("<지금 부터는 연산자 입니다>");
 
 // 1. 산술 연산자
 // +, -, *, /, % (나머지 연산자)
@@ -49,3 +49,49 @@ let cde = 2;
 cde = cde * 2;
 cde *= 2;
 console.log(cde);
+
+// 3. 부정연산자
+// !를 사용하여 true를 flase로, false를 true로 바꿀 수 있음
+
+console.log(!true); // false
+console.log(!false); // true
+console.log(!!0); // false
+
+// 4. 비교 연산자
+// ===, !==, <, >, <=, >=
+// ==, !=는 사용하지 않는 것이 좋음
+
+// 일치연산자 (형 변환X)
+console.log(1 === 1); // true
+console.log(1 === "1"); // false
+
+// 불일치 연산자 (형변환X)
+console.log(1 !== 1); // false
+console.log(1 !== "1"); // true
+
+// 대소 비교 연산자 (형변환O)
+console.log(1 < 2);
+console.log(1 <= 2);
+console.log(1 > 2);
+console.log(1 >= 2);
+
+// 논리 연산자
+// &&(and) 연산자
+console.log(true && true); // 둘 다 참이라서 => true
+console.log(true && false); // 둘 중 하나가 거짓이라서 => false
+console.log(1 < 2 && 2 < 3); // 둘 다 참이라서 => true
+
+console.log(true && false); // 둘 다 거짓이라서 false -> 가장 먼저 만나는 거짓 => false
+console.log(1 && 0); // 둘 다 거짓이라서 false인데 -> 가장 먼저 만나는 거짓 => 0
+console.log(1 && 2 && 0); // 0
+console.log(1 && 0 && 2); // 0
+console.log(1 && null && 0); // 가장 먼저 만나는 거짓 => null 출력
+console.log("a" && "b" && ""); // 빈 데이터 출력
+console.log("a" && "b" && "c"); // 모두가 참 -> 참 -> 마지막데이터인 => c출력
+
+// ||(or) 연산자
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || false); //false
+
+//병합 연산자
