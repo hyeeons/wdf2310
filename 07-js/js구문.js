@@ -178,3 +178,50 @@ for (let users of userSeasons) {
   console.log(users);
   console.log(users.name);
 }
+
+// for in 문
+// for (변수 in 객체) {실행될 코드}
+console.log("<for in 문입니다.>");
+const userC = {
+  name: "봄이",
+  age: 2,
+};
+
+// 점 표기법
+console.log(userC.name, userC.age); // 봄이 2
+
+// 대괄호 표기법
+console.log(userC["name"], userC["age"]); // 봄이 2
+
+for (let key in userC) {
+  console.log(key); // name, age
+  console.log(userC[key]);
+}
+
+// while문
+// while (조건) {실행될 코드}
+
+// 1부터 10까지 더하기
+console.log("<while문 입니다>");
+let k = 1; // 초기값
+let sum = 0; //합계를 저장할 변수 0은 초기값
+
+while (k <= 10) {
+  //   sum = sum + k;
+  //   k = k + 1;
+  //   k += 1; // k에 1을 더함
+  //
+  sum += k; // sum에 k를 더함
+  k++; //k에 1을 더함
+}
+
+console.log(sum);
+
+// do while문
+// do {실행될 코드} while {조건}
+
+// 0부터 9까지 출력
+let z = 0;
+do {
+  console.log(z), z++;
+} while (z < 10);
