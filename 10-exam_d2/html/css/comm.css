@@ -5,9 +5,132 @@
   box-sizing: border-box;
   list-style: none;
   color: #333;
-  background-color: #fff;
+  line-height: 1.5;
+  /* font-size: 16px; */
 }
 
 .inner {
   display: flex;
+  height: 650px;
+  /* height: calc(100vh - 100px); */
+}
+
+/* gnb */
+.gnb {
+  width: 200px;
+}
+
+.logo a {
+  display: block;
+  margin: 0 auto;
+}
+
+.logo a img {
+  display: block;
+  width: 150px;
+  margin: 30px auto;
+}
+
+.nav {
+  margin-top: 20px;
+}
+
+.nav-depth1 > li > a {
+  display: block;
+  padding: 18px 20px 15px;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-depth1 > li:hover .nav-depth2 {
+  max-height: 300px;
+}
+
+.nav-depth1 > li {
+  position: relative;
+}
+.nav-depth2 {
+  /* position: absolute;
+  top: 0;
+  left: 100%; */
+  width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #eee;
+  transition: all 0.5s;
+
+  /* 부모의 가로만큼 옆으로 => 100% */
+}
+
+.nav-depth2 > li > a {
+  display: block;
+  width: 200px;
+  padding: 5px 15px;
+  /* white-space: nowrap; */
+}
+
+/* 메인 */
+.main {
+  flex-grow: 1;
+}
+.content-wrap {
+  display: flex;
+  /* height: calc(100vh - 350px); */
+  height: 400px;
+}
+
+.bnr-slide {
+  background: lightseagreen;
+  width: calc(100% - 230px);
+  position: relative;
+}
+.bnr-slide ul {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* li가 3개라 300% */
+
+.bnr-slide li {
+  width: 100%;
+}
+.bnr-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contents {
+  width: 230px;
+  background: lightgreen;
+}
+
+/* 공지사항 갤러리 */
+.noticgall-wrap {
+  display: flex;
+  height: 250px;
+}
+.notice {
+  width: 50%;
+  background: lightgray;
+}
+.gallery {
+  width: 50%;
+  background: lightgoldenrodyellow;
+}
+/* 풋터 */
+.footer {
+  height: 100px;
+  background: lightpink;
+}
+
+.ft-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
