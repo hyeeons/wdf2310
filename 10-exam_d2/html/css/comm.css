@@ -84,7 +84,9 @@
   background: lightseagreen;
   width: calc(100% - 230px);
   position: relative;
+  overflow: hidden;
 }
+
 .bnr-slide ul {
   display: flex;
   width: 300%;
@@ -92,6 +94,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 3s ease;
 }
 /* li가 3개라 300% */
 
@@ -105,24 +108,134 @@
   object-fit: cover;
 }
 
-.contents {
+.bnr-img {
   width: 230px;
   background: lightgreen;
 }
+.bnr-img .img-box {
+  width: 100%;
+  height: 100%;
+}
+.bnr-img .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-/* 공지사항 갤러리 */
+.bnr-img .text-box {
+  margin: 100px auto;
+}
+.bnr-img p {
+  text-align: center;
+}
+
+.bnr-img .tit {
+  font-size: 22px;
+  font-weight: 800;
+}
+.bnr-img .txt {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* 공지사항 갤러리 공통 */
+.noticgall-wrap h2 {
+  margin: 10px;
+}
+
+/* 공지사항  */
 .noticgall-wrap {
   display: flex;
   height: 250px;
 }
 .notice {
   width: 50%;
-  background: lightgray;
 }
+
+.notice li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.notice span {
+  padding: 0 10px;
+  display: block;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.notice em {
+  padding-right: 20px;
+  font-style: normal;
+}
+
+/* 갤러리 */
 .gallery {
   width: 50%;
-  background: lightgoldenrodyellow;
+  padding: 0 10px;
 }
+
+.gallery .img-box {
+  display: flex;
+  gap: 10px;
+}
+.gallery .img-box a {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+.gallery .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .img-box span {
+  display: block;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+.noticgall-wrap {
+  display: none;
+}
+
+/* tabs */
+
+.tabs {
+  display: flex;
+  position: relative;
+}
+.tabs .notice {
+  width: inherit;
+}
+.tabs .active .tab-tit {
+  background: lightblue;
+  color: lightcoral;
+}
+
+.tabs h2 {
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.tabs ul {
+  display: none;
+}
+
+.tabs .active ul {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+.tabs .gallery.active ul {
+  display: flex;
+}
+
 /* 풋터 */
 .footer {
   height: 100px;
