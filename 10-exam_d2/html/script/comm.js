@@ -29,4 +29,13 @@ $(function () {
     $(".tab").removeClass("active");
     $(this).parents(".tab").addClass("active");
   });
+
+  //모달창 구현
+  $(".notice li:first-child").on("click", function () {
+    $(".modal-bg").css("display", "flex");
+  });
+
+  $("#modalClose").on("click", function () {
+    $(".modal-bg").hide();
+  });
 });
