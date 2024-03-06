@@ -221,3 +221,52 @@ const f = () => {
 const g = () => {
   [1, 2];
 };
+
+// 호출 스케일링
+// setTimeout(함수, 시간)
+// 함수를 인수로 전달
+
+const timer = setTimeout(() => {
+  console.log("hello");
+}, 3000);
+
+const btnStop = document.querySelector("#btnStop");
+btnStop.addEventListener("click", () => {
+  console.log("취소되었습니다!");
+  clearTimeout(timer, 1000);
+});
+
+//setInterval
+setInterval(() => {
+  console.log("안뇽");
+}, 1000);
+
+const slideStop = document.querySelector("#slideStop");
+
+slideStop.addEventListener("click", () => {
+  console.log("슬라이드 정지");
+  clearInterval(timer);
+});
+
+// callback
+
+const bbb = (props) => {
+  props();
+  console.log("B");
+};
+
+const y = () => {
+  console.log("Y");
+};
+bbb(y);
+
+const sum3 = (a, b, c) => {
+  // setTimeout(함수, 시간);
+  setTimeout(() => {
+    return c(a + b);
+  }, 1000);
+};
+
+sum3(1, 2, () => {
+  console.log("hello");
+});

@@ -122,3 +122,70 @@ for (let i = 0; i < lovers.length; i++) {
 for (let lover of lovers) {
   console.log(`${lover.name}의 나이는 ${lover.age}입니다.`);
 }
+
+function hello() {
+  console.log("hello!");
+}
+
+const hello2 = () => {
+  console.log("안녕하세요!?");
+};
+
+const hello3 = function () {
+  console.log("안녕안녕!");
+};
+hello();
+hello2();
+hello3();
+function sum(a, b = 5) {
+  return a + b;
+}
+console.log(sum(1, 3));
+console.log(sum(4));
+
+const user = {
+  name: "여름",
+  age: 2,
+};
+
+function getName({ name, age }) {
+  return `${name}이 나이는 ${age}살 입니다.`;
+}
+
+console.log(getName(user));
+
+function get2([, b = "기본값"]) {}
+
+function sum4(...rest) {
+  return rest;
+}
+
+console.log(sum4(1, 2, 3, 4, 5, 6, 7, 8));
+
+const arrow = () => {};
+
+// const sum3 = (x, y) => {
+//   return x + y;
+// };
+
+const sum3 = (x, y) => x + y;
+
+console.log(sum3(2, 3));
+
+const aa = () => {};
+
+const bb = (x) => {};
+
+const cc = (x, y) => {
+  return x + y;
+};
+
+const ee = (x, y) => x + y;
+
+const gg = () => {
+  return { a: 1, b: 2 };
+};
+
+const hh = () => ({ a: 1, b: 2 });
+
+const ii = () => [1, 2, 3];
