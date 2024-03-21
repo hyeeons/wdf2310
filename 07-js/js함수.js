@@ -270,3 +270,38 @@ const sum3 = (a, b, c) => {
 sum3(1, 2, () => {
   console.log("hello");
 });
+
+const aaaa = () => {
+  console.log("A양");
+};
+
+const bbbb = () => {
+  console.log("B양");
+};
+
+aaaa();
+bbbb();
+
+aaaa(bbbb);
+
+// const sum4 = (a, b, c) => {
+//   setTimeout(() => {
+//     return c(a + b);
+//   }, 2000);
+// };
+
+// console.log(sum4(1, 2));
+
+// sum4(1, 5, () => {
+//   console.log("출력");
+// });
+
+const americano = {
+  name: "아메리카노",
+  price: 4000,
+  front: function () {
+    return `${this.name}는 ${this.price}원입니다.`;
+  },
+};
+
+console.log(americano.front());
